@@ -1,0 +1,151 @@
+html {
+    font-family: Verdana, Arial, Helvetica, "Droid sans", sans-serif;
+    font-size: 100%;  /* flexible baseline */
+    /* 
+    * rem is set relative to the font size of the root element, the html, instead of
+    * the body, and this is where the r in rem comes from, as rem stands for “root em“.
+    * The default browser font size is 16px.
+    */
+    line-height: 1.5;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Typography */
+h1 {
+    font-size: 1.75rem; /* =28px */
+    letter-spacing: 0.05em;
+
+}
+
+h2 {
+    font-size: 1.25rem;  /* =20px */
+}
+
+/* REM calculator https://offroadcode.com/prototypes/rem-calculator/ */
+
+/* Avoid ID's. Use Classes sparingly. Avoid creating <div> just to apply a style if you can. */
+
+header {
+    background-color: black;
+    color: white;
+    padding: 1em;
+}
+
+nav {
+    background-color: #222222;
+    color: white;
+    padding: .5em;
+}
+
+.content {
+    padding: 1em;
+}
+
+footer {
+    background-color: #222222;
+    color: white;
+    padding: .5em;
+}
+
+/* Navigation */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    padding: .5em;
+    border-right: 1px solid white;
+    margin-left: 0;
+}
+
+
+/* Media */
+
+img {
+    max-width: 100%;
+    height: auto;
+/*  margin: 0 auto;               Centring an image. */
+}
+
+.content img {
+    max-width: 100%;
+    display: block;
+    margin: auto;               /* Centring an image. */
+}
+
+#picrow img {
+    display: inline;
+    padding: .5em;
+    width: 30%;
+}
+
+/* pictures shouldn't be in a row on small screens */
+@media screen and (max-width: 700px) {
+    #picrow img {
+        float: none;
+        padding: .5em;
+        width: 100%;
+    }
+}
+
+.videoWrapper {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+.video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 1em;
+}
+
+/* Links - General */
+a { 
+    text-decoration: underline;
+    color:#0000CC ;
+}
+a:visited {
+    color:#6D006D ;
+}
+a:hover {
+    outline:thick dotted;
+    color:#CC0000 ;
+}
+a:focus {
+    font-weight: bold;
+    color:#CC0000 ;
+}
+
+/* Links - Navigation - if the background colour for your navigation is different to the body of text, the link colours may also need to change to maintain a good contrast. */
+nav a { 
+    color: white;
+}
+
+nav a:visited {
+    color: white;
+    font-weight: bold;
+}
+
+/**
+ * Created with advice and support from @csswizardry and @craftedpixelz 
+ */
